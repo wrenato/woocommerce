@@ -1,0 +1,11 @@
+<?php
+function price_w_iva($price){
+	global $product;
+	return round(wc_get_price_including_tax($product)* 1.177,2);
+	}
+
+function stockUp($value){
+$value = 50;
+	return $value;
+}
+?>
