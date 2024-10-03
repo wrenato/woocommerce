@@ -1,4 +1,5 @@
 <?php
+
 function price_w_iva($price){
 	global $product;
 	return round(wc_get_price_including_tax($product)* 1.177,2);
@@ -8,4 +9,14 @@ function stockUp($value){
 $value = 50;
 	return $value;
 }
+
+function remove_html_tags($content) {
+    // Remove todas as tags HTML da string
+    $clean_content = wp_strip_all_tags($content);
+
+
+    // Retorna o conteúdo limpo
+    return $clean_content;
+}
+
 ?>
