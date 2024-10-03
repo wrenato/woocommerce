@@ -19,4 +19,17 @@ function remove_html_tags($content) {
     return $clean_content;
 }
 
+// Função para dividir o valor do campo de peso por 100
+function divide_product_weight_by_10( $weight ) {
+    if ( ! empty( $weight ) ) {
+        // Dividir o valor do peso por 100
+        $weight_divided = $weight / 10;
+
+        // Retornar o valor dividido
+        return $weight_divided;
+    }
+
+    return $weight; // Retorna o peso original se estiver vazio
+}
+
 ?>
